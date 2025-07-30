@@ -11,8 +11,8 @@ GOTODO 是一个基于四象限法（重要紧急矩阵/Eisenhower Matrix）的 
 
 GOTODO is a Chrome extension for managing your tasks using the Eisenhower Matrix (Important/Urgent Quadrant). It helps you focus on what really matters. Features include task add/edit, priority classification, quadrant view, day view, and task sorting.
 
-![GOTODO 截图 | Screenshot](./public/home.png)
-
+![GOTODO 总览模式 | Screenshot](./public/home.png)
+![GOTODO 日模式 | Screenshot](./public/home2.png)
 ---
 
 ## 主要功能 | Features
