@@ -91,7 +91,7 @@ const App: React.FC = () => {
       {mode === 'overview' ? (
         <TodoList todos={todos} onChange={saveTodos} />
       ) : (
-        <QuadrantView todos={todos} />
+        <QuadrantView todos={todos} onChange={saveTodos} />
       )}
     </div>
   );
