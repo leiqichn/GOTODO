@@ -6,4 +6,5 @@ export interface TodoItem {
     deadline: string; // ISO 字符串
     createdAt: string; // ISO 字符串
     order: number;
+    completed?: boolean; // 新增，表示是否完成
   }
