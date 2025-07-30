@@ -28,10 +28,11 @@ GOTODO is a Chrome extension for managing your tasks using the Eisenhower Matrix
 
 ## 安装与使用 | Installation & Usage
 
+
 1. **下载插件安装包**
-   - 前往 [Releases 页面](https://github.com/leiqichn/GOTODO/releases) 下载最新的 `GOTODO-Plugin.zip` 文件。
+   - 前往 [Releases 页面](https://github.com/leiqichn/GOTODO/releases) 下载最新的 `GOTODO-V1.0.0.zip` 文件。
 2. **解压安装包**
-   - 右键压缩包，选择“解压到当前文件夹”或“解压到 GOTODO-Plugin”
+   - 右键压缩包，选择“解压到当前文件夹”或“解压到 GOTODO”
 3. **加载插件到 Chrome**
    - 打开 Chrome，访问 `chrome://extensions/`
    - 开启右上角“开发者模式”
