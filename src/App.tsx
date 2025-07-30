@@ -33,9 +33,59 @@ const App: React.FC = () => {
       >
         Eisenhower Matrix TODO Chrome Extension | 四象限法待办插件
       </div>
-      <div>
-        <button onClick={() => setMode('overview')}>总览模式</button>
-        <button onClick={() => setMode('day')}>日模式</button>
+      <div style={{ display: 'flex', gap: 10, margin: '10px 0 18px 0' }}>
+        <button
+          onClick={() => setMode('overview')}
+          style={{
+            flex: 1,
+            height: 36,
+            border: 'none',
+            borderRadius: 6,
+            background: mode === 'overview'
+              ? 'linear-gradient(90deg, #409eff 60%, #66b1ff 100%)'
+              : '#f0f0f0',
+            color: mode === 'overview' ? '#fff' : '#409eff',
+            fontWeight: 600,
+            fontSize: 15,
+            boxShadow: mode === 'overview' ? '0 1px 4px #e0e0e0' : 'none',
+            cursor: 'pointer',
+            transition: 'background 0.2s, color 0.2s',
+          }}
+          onMouseOver={e => {
+            if (mode !== 'overview') e.currentTarget.style.background = '#e6f0fa';
+          }}
+          onMouseOut={e => {
+            if (mode !== 'overview') e.currentTarget.style.background = '#f0f0f0';
+          }}
+        >
+          总览模式
+        </button>
+        <button
+          onClick={() => setMode('day')}
+          style={{
+            flex: 1,
+            height: 36,
+            border: 'none',
+            borderRadius: 6,
+            background: mode === 'day'
+              ? 'linear-gradient(90deg, #409eff 60%, #66b1ff 100%)'
+              : '#f0f0f0',
+            color: mode === 'day' ? '#fff' : '#409eff',
+            fontWeight: 600,
+            fontSize: 15,
+            boxShadow: mode === 'day' ? '0 1px 4px #e0e0e0' : 'none',
+            cursor: 'pointer',
+            transition: 'background 0.2s, color 0.2s',
+          }}
+          onMouseOver={e => {
+            if (mode !== 'day') e.currentTarget.style.background = '#e6f0fa';
+          }}
+          onMouseOut={e => {
+            if (mode !== 'day') e.currentTarget.style.background = '#f0f0f0';
+          }}
+        >
+          日模式
+        </button>
       </div>
       <TodoForm todos={todos} onChange={saveTodos} />
       {mode === 'overview' ? (
