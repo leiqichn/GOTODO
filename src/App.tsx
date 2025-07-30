@@ -4,12 +4,14 @@ import { getTodos, setTodos } from './storage';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import QuadrantView from './components/QuadrantView';
+import './App.css';
 
 type Mode = 'overview' | 'day';
 
 const App: React.FC = () => {
   const [todos, setTodoList] = useState<TodoItem[]>([]);
   const [mode, setMode] = useState<Mode>('overview');
+  const [hover, setHover] = useState(false);
 
   useEffect(() => {
     getTodos().then(setTodoList);
@@ -22,7 +24,15 @@ const App: React.FC = () => {
 
   return (
     <div style={{ width: 400, padding: 16 }}>
-      <h2>GOTODO</h2>
+      <h2 style={{ marginBottom: 0 }}>GOTODO</h2>
+      <div
+        className={`subtitle${hover ? ' subtitle-large' : ''}`}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onClick={() => setHover(h => !h)}
+      >
+        Eisenhower Matrix TODO Chrome Extension | 四象限法待办插件
+      </div>
       <div>
         <button onClick={() => setMode('overview')}>总览模式</button>
         <button onClick={() => setMode('day')}>日模式</button>

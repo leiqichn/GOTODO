@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "GOTODO",
+  "version": "1.0",
+  "description": "四象限法 TODO 管理插件",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["storage"]
+}
